@@ -1,2 +1,4 @@
 server:
   port: 8880
+hello:
+  world: n hao

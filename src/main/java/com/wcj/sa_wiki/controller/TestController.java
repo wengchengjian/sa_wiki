@@ -1,5 +1,6 @@
 package com.wcj.sa_wiki.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,9 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
+    @Value("${hello.world:Test}")
+    private String hello;
+
     @GetMapping("/hello")
     public String Hello(){
-        return "hello";
+        return hello;
     }
 
     @PostMapping("/hellopost")
