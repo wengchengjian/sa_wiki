@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
  * @Version 1.0.0
  */
 @RestController
+@RequestMapping("/test")
 public class TestController {
 
     @Value("${hello.world:Test}")
@@ -23,6 +25,7 @@ public class TestController {
 
     @Autowired
     private TestService testService;
+
     @GetMapping("/hello")
     public String Hello(){
         return hello + "145687";

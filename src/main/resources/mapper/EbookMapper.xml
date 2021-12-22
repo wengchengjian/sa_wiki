@@ -181,7 +181,10 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
-  <update id="updateByExampleSelective" parameterType="map">
+    <select id="list" resultType="com.wcj.sa_wiki.entity.Ebook">
+      select * from ebook
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
     update ebook
     <set>
       <if test="record.id != null">

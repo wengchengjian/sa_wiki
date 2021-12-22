@@ -2,8 +2,9 @@ package com.wcj.sa_wiki.mapper;
 
 import com.wcj.sa_wiki.entity.Ebook;
 import com.wcj.sa_wiki.entity.EbookExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface EbookMapper {
     long countByExample(EbookExample example);
@@ -27,4 +28,6 @@ public interface EbookMapper {
     int updateByPrimaryKeySelective(Ebook record);
 
     int updateByPrimaryKey(Ebook record);
+
+    List<Ebook> list();
 }
